@@ -1,0 +1,285 @@
+html {
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.scroll-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	width: 0%;
+	background: red;
+	z-index: 9999;	
+}
+
+
+body {
+	scroll-snap-align: start;
+	background-image: url("new-portfolio-background.jpeg");
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+.hello {
+	scroll-snap-align: start;
+	color: gray;
+	font-family: Arial, sans-serif;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	margin-top: 7%;
+}
+
+.who-am-i {
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 150px;
+	display: flex;
+	justify-content: center;
+	width: 30%;
+	margin-left: 35%;
+	margin-top: -10px;
+	text-shadow: 0px 5px 10px red;
+	font-style: italic;
+}
+
+.my-paragraph {
+	color: white;
+	display: flex;
+	justify-content: center;
+	margin-top: -70px;
+	font-size: 20px;
+}
+
+.nav-bar ul {
+	color: gray;
+	display: flex;
+	gap: 50px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 25px;
+	justify-content: right;
+	font-family: Arial, sans-serif;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: rgb(10, 10, 10 / 0.85);
+	backdrop-filter: blur(10px);
+}
+
+.nav-bar ul a {
+	text-decoration: none;
+	color: gray;
+}
+
+.nav-bar ul a:hover {
+	color: #A67B5B;
+	transition: 0.5s;
+}
+
+.see-projects, .contact-me {
+	color: gray;
+	background-color: black;
+	border: 1px solid black;
+	margin-top: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+}
+
+.see-projects {
+	margin-left: 38%;
+}
+
+.see-projects:hover, .contact-me:hover {
+	color: #A67B5B;
+	transition: 0.03s;
+	box-shadow: 0 0 15px rgb(55, 25, 55 / 1.0);
+	transform: translateY(-6px);
+}
+
+. {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.why-me-h1 {
+	scroll-snap-align: start;
+	color: white;
+	margin-left: 30px;
+	font-size: 80px;
+}
+
+
+.modern-web-dev, .creative-problem-solving, .continuous-learning {
+	color: #A67B5B;
+	font-size: 30px;
+	margin-left: 30px;
+	margin-top: 80px;
+}
+
+.p1, .p2, .p3 {
+	color: white;
+	margin-left: 30px;
+	font-family: sans-serif;
+	margin-top: -20px;
+}
+
+.highlight {
+	color: #A67B5B;
+	font-weight: bold;
+	text-shadow: 0 0 10px rgb(167, 139, 250 / 0.4);
+}
+
+
+h1 {
+	color: white;
+	font-size: 80px;
+	margin-left: 20px;
+	margin-top: 20%;
+	font-family: Arial, sans-serif;
+}
+
+.about-me-p {
+	color: white;
+	margin-left: 30px;
+	font-family: sans-serif;
+	margin-top: -20px;
+	max-width: 800px;
+}
+
+.langs {
+	font-size: 80px;
+	color: white;
+	margin-top: 50px;
+}
+
+.skills-container {
+	display: flex;
+	gap: 35px;
+	flex-wrap: wrap;
+}
+
+.skill {
+	text-align: center;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+	color: #A67B5B;
+	border: 6px solid #A67B5B;
+	position: relative;
+	margin-left: 30px;
+	background: conic-gradient(from -90deg, #d69b32 var(--percent), #292929 0);
+}
+
+.circle::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 6px solid #A67B5B;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	transform: rotate(30deg);
+}
+
+.skill p {
+	color: white;
+	margin-top: 12px;
+}
+
+.html i {
+	color: #E44D26;
+}
+
+.css i {
+	color: #1572B6;
+}
+
+.python i {
+	color: #3776AB;
+}
+
+.circle-p {
+	color: white;
+	font-size: 14px;
+	max-width: 800px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.contact {
+	position: relative;
+	min-height: 100vh;
+}
+
+.cotact-h1 {
+	color: white;
+	font-size: 60px;
+	margin-top: 10%;
+	margin-left: 20px;
+}
+
+.p-contact-1, .p-contact-2, .p-contact-3 {
+	color: white;
+	font-family: sans-serif;
+	margin-top: -20px;
+	margin-left: 30px;
+	max-width: 1000px;
+}
+
+.contact-links i {
+	font-size: 30px;
+	color: black;
+	background-color: white;
+	border-radius: 20px;
+	margin-left: 20px;
+	padding: 10px;
+}
+
+.contact-links a {
+	font-family: sans-serif;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	display: flex;
+	direction: unset;
+	margin-top: 20px;
+	letter-spacing: 5px;
+	margin-left: 5px;
+}
+
+i:hover {
+	text-shadow: #A67B5B;
+	transition: 0.03s;
+	box-shadow: 0 0 15px rgb(55, 25, 55 / 1.0);
+	transform: translateY(-6px);
+}
+
+img {
+	max-width: 350px;
+	border-radius: 2px;
+	margin-left: 70%;
+	margin-top: -50%;
+	border: 2px solid white;
+}

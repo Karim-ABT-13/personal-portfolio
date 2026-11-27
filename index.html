@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<title>Portfolio</title>
+</head>
+<body>
+
+	<script>
+		window.addEventListener("scroll", () => {
+			const scrollTop = document.documentElement.scrollTop;
+
+			const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+			const progress = (scrollTop / scrollHeight) * 100; document.querySelector(".scroll-progress").style.width = progress + "%";
+		});
+	</script>
+
+	<div class="scroll-progress"></div>
+
+	<div class="nav-bar">
+		<ul>
+			<li><a href="#home"> Home</a></li>
+			<li><a href="#whyMe">Why Me?</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#contact">Contact Me</a></li>
+		</ul>
+
+	</div>
+
+
+	<div id="home">
+		<h2 class="hello">Hi, I'm KARIM</h2>
+		<h1 class="who-am-i">Front-End Developer.</h1>
+
+		<p class="my-paragraph">I build modern and responsive web experiences.</p>
+
+		<button class="see-projects">See Projects</button>
+		<button class="contact-me">Contact Me</button>
+
+	</div>
+
+
+	<div id="whyMe">
+
+		<h1 class="why-me-h1">Why Me</h1>
+
+		<div class="whyMe1">
+			<h2 class="modern-web-dev">Modern Web Developement</h2>
+			<p class="p1">Building clean, modern, and responsive with a focus on simplicity and functionality.</p>
+		</div>
+
+
+		<div class="whyMe2">
+			<h2 class="creative-problem-solving">Creative Problem Solving</h2>
+			<p class="p2">I enjoy turning ideas into digital experiences, finding creative solutions, and constantly exploring new possibilities.</p>
+		</div>
+
+
+		<div class="whyMe3">
+			<h2 class="continuous-learning">Continuous Learning</h2>
+			<p class="p3">Always learning, improving my skills, and pushing myself to build better projects with every experience.</p>
+		</div>
+
+	</div>
+
+
+	<div id="about">
+		<h1>About Me</h1>
+		<p class="about-me-p">I am a passionate Web Developer focused on creating modern, elegant, and responsive websites that combine stunning design with seamless functionality. I specialize in building degital experiences that help businesses establish a strong online presence, showcase their services, and connect with their costumers. Every project is approached with attention to detail, creativity, and a commitment to quality, ensuring that each website is visually appealing, user-friendly, and optimized for different devices. My goal is to <span class="highlight">turn ideas into powerful digital experiences</span> that make a lasting impression.</p>
+
+		<h1 class="langs">Languages</h1>
+
+		<div class="skills-container">
+			
+
+			<div class="skill">
+				<div class="circle html" style="--percent: 80%">
+					<i class="fa-brands fa-html5"></i>
+				</div>
+				<p>HTML</p>
+			</div>
+
+
+			<div class="skill">
+				<div class="circle css" style="--percent: 74%">
+					<i class="fa-brands fa-css3-alt"></i>
+				</div>
+				<p>CSS</p>
+			</div>
+
+
+			<div class="skill">
+				<div class="circle python" style="--percent: 60%">
+					<i class="fa-brands fa-python"></i>
+				</div>
+				<p>Python</p>
+			</div>
+
+		</div>
+
+		<p class="circle-p">Combing creativity with technical expertise to build modern, responsive, and user-friendly digital experiences. Focused on clean code, innovative solution, and delivering high-quality results.</p>
+	</div>
+
+
+	<div id="contact">
+		<h1 class="contact-h1">Let's Build Something.</h1>
+		<p class="p-contact-1">Have an idea or project in mind? I'm a web developer passionate about creating modern, clean, and responsive websites that bring ideas to life.</p>
+		<p class="p-contact-2">I specialize in building websites and landing pages with a focus on clean design, smooth user experience, and functionality. Wether you're looking to build your personal portfolio, showcase your business, or bring a new idea online, I'm here to help.</p>
+		<p class="p-contact-3">Feel free to reach out. I'd love to hear about your project and turn your vision into reality.</p>
+
+		<div class="contact-links">
+			<a href="https://github.com/Karim-ABT-13">
+				<i class="fa-brands fa-github github-icon"></i>
+				<p>Karim-ABT-13</p>
+			</a>
+
+			<a href="https://wa.me/213542705807">
+				<i class="fa-brands fa-whatsapp"></i>
+				<p>+213 542705807</p>
+			</a>
+
+			<a href="https://x.com/Zirlexxx">
+				<i class="fa-brands fa-x-twitter twitter-icon"></i>
+				<p>Zirlexxx</p>
+			</a>
+
+			<a href="https://www.instagram.com/zirl.ex/">
+				<i class="fa-brands fa-instagram instagram-icon"></i>
+				<p>zirl.ex</p>
+			</a>
+
+			<a href="https://www.facebook.com/share/1CMdCWceQv/">
+				<i class="fa-brands fa-facebook facebook-icon"></i>
+				<p>zirlex</p>
+			</a>
+		</div>
+
+		<img src="me.jpg">
+	</div>
+
+
+		
+</body>
+</html>
