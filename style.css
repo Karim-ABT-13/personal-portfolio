@@ -286,103 +286,148 @@ img {
 
 
 
-/* ============================
-   MOBILE RESPONSIVE DESIGN
-============================ */
+/* ================================
+   MODERN MOBILE EXPERIENCE
+   Desktop design remains unchanged
+================================ */
 
 @media screen and (max-width: 768px) {
 
     html {
+        scroll-behavior: smooth;
         scroll-snap-type: none;
+        overflow-x: hidden;
     }
 
     body {
-        overflow-x: hidden;
         min-width: 0;
+        overflow-x: hidden;
+        background-attachment: scroll;
     }
+
+    /* Sections */
 
     #home,
     #whyMe,
     #about,
     #contact {
-        width: 100%;
-        min-height: auto;
-        padding: 65px 5%;
         box-sizing: border-box;
+        width: 100%;
+        min-height: 100vh;
+        padding: 75px 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* Navigation */
+
     .nav-bar ul {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        display: flex;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px 5px;
-        font-size: 16px;
+
+        gap: 20px;
+        padding: 18px 12px;
+        margin: 0;
+
+        font-size: 15px;
+        backdrop-filter: blur(15px);
     }
 
-    /* Hero section */
+    .nav-bar a {
+        transition: 0.3s ease;
+    }
+
+    /* Home */
+
     .hello {
-        font-size: 23px;
-        margin-top: 30px;
+        text-align: center;
+        font-size: 22px;
+        margin: 35px 0 15px;
     }
 
     .who-am-i {
         width: 100%;
-        margin: 0;
-        font-size: clamp(38px, 9vw, 65px);
+        margin: 10px auto;
+        font-size: clamp(38px, 10vw, 65px);
         text-align: center;
         justify-content: center;
+        line-height: 1.15;
     }
 
     .my-paragraph {
-        margin: 15px auto;
-        text-align: center;
+        display: block;
+        margin: 20px auto;
         font-size: 16px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .see-projects {
+        margin-left: 0;
     }
 
     .see-projects,
     .contact-me {
-        margin: 15px 5px;
+        align-self: center;
+        margin-top: 15px;
+        padding: 13px 22px;
         font-size: 15px;
     }
 
     /* Why Me */
+
     .why-me-h1 {
-        font-size: 45px;
-        margin: 0 0 30px;
+        font-size: clamp(38px, 9vw, 50px);
+        margin: 0 0 35px;
     }
 
     .modern-web-dev,
     .creative-problem-solving,
     .continuous-learning {
-        font-size: 22px;
-        margin: 35px 0 15px;
+        font-size: 23px;
+        margin: 30px 0 15px;
     }
 
-    .p1, .p2, .p3 {
+    .p1,
+    .p2,
+    .p3 {
         margin: 0;
-        line-height: 1.7;
+        font-size: 15px;
+        line-height: 1.8;
     }
 
     /* About */
-    #about h1 {
-        font-size: 42px;
-        margin: 0 0 25px;
-    }
 
     .about-me-p {
-        margin: 0;
+        margin: 15px 0;
+        max-width: 100%;
+        font-size: 15px;
         line-height: 1.8;
     }
 
     .langs {
         font-size: 42px;
-        margin-top: 45px;
+        margin: 45px 0 25px;
     }
 
     .skills-container {
+        display: flex;
         justify-content: center;
-        gap: 25px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .skill {
+        min-width: 110px;
+        text-align: center;
     }
 
     .circle {
@@ -391,68 +436,103 @@ img {
 
     .circle-p {
         margin: 30px 0 0;
-        line-height: 1.7;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
     }
 
     /* Contact */
+
     .contact-h1 {
-        font-size: clamp(32px, 8vw, 48px);
-        margin: 0 0 25px;
+        font-size: clamp(36px, 9vw, 50px);
+        margin: 0 0 30px;
     }
 
     .p-contact-1,
     .p-contact-2,
     .p-contact-3 {
         margin: 15px 0;
-        line-height: 1.7;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .contact-links a {
-        font-size: 15px;
-        letter-spacing: 1px;
-        margin-left: 0;
-        gap: 8px;
+        display: flex;
         align-items: center;
+        gap: 12px;
+        margin: 0;
+        font-size: 14px;
     }
 
     .contact-links i {
+        margin: 0;
         font-size: 22px;
-        margin-left: 0;
+        padding: 9px;
     }
 
-    /* Profile image */
     #contact img {
         display: block;
-        width: min(80%, 280px);
+        width: min(75%, 250px);
         max-width: 100%;
-        margin: 35px auto 0;
         height: auto;
+        margin: 40px auto 0;
+    }
+
+    /* Smooth transitions */
+
+    a,
+    button {
+        transition: all 0.3s ease;
+    }
+
+    p {
+        overflow-wrap: break-word;
     }
 }
 
 /* Small phones */
+
 @media screen and (max-width: 480px) {
 
+    #home,
+    #whyMe,
+    #about,
+    #contact {
+        padding: 60px 6%;
+    }
+
     .nav-bar ul {
-        gap: 12px;
+        gap: 13px;
         font-size: 13px;
     }
 
     .who-am-i {
-        font-size: 38px;
+        font-size: 36px;
+    }
+
+    .why-me-h1,
+    .langs {
+        font-size: 36px;
+    }
+
+    .modern-web-dev,
+    .creative-problem-solving,
+    .continuous-learning {
+        font-size: 20px;
     }
 
     .see-projects,
     .contact-me {
-        padding: 10px 13px;
         font-size: 14px;
+        padding: 11px 16px;
     }
-
-    .why-me-h1,
-    #about h1,
-    .langs {
-        font-size: 35px;
-    }
-
 }
+
 
