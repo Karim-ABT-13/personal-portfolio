@@ -286,10 +286,11 @@ img {
 
 
 
-/* ================================
-   MODERN MOBILE EXPERIENCE
-   Desktop design remains unchanged
-================================ */
+
+/* ==================================
+   MOBILE PREMIUM EXPERIENCE
+   Preserve original identity
+================================== */
 
 @media screen and (max-width: 768px) {
 
@@ -300,12 +301,80 @@ img {
     }
 
     body {
-        min-width: 0;
         overflow-x: hidden;
+        min-width: 0;
         background-attachment: scroll;
     }
 
-    /* Sections */
+    /* NAVIGATION */
+
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9998;
+        box-sizing: border-box;
+        background: rgb(10 10 10 / 88%);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .nav-bar ul.nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        list-style: none;
+        margin: 0;
+        padding: 16px 10px;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .nav-bar ul a {
+        color: gray;
+        text-decoration: none;
+        transition: color .3s ease;
+    }
+
+    .nav-bar ul a:hover,
+    .nav-bar ul a.active {
+        color: #A67B5B;
+    }
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 6px 0;
+        background: white;
+        transition: .3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* SECTIONS */
 
     #home,
     #whyMe,
@@ -314,42 +383,28 @@ img {
         box-sizing: border-box;
         width: 100%;
         min-height: 100vh;
-        padding: 75px 7%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        padding: 100px 7% 65px;
+        scroll-margin-top: 60px;
     }
 
-    /* Navigation */
-
-    .nav-bar ul {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-
-        gap: 20px;
-        padding: 18px 12px;
-        margin: 0;
-
-        font-size: 15px;
-        backdrop-filter: blur(15px);
+    h1 {
+        margin-left: 0;
+        margin-top: 35px;
+        font-size: clamp(38px, 9vw, 52px);
     }
 
-    .nav-bar a {
-        transition: 0.3s ease;
+    p {
+        line-height: 1.8;
+        overflow-wrap: break-word;
     }
 
-    /* Home */
+    /* HOME */
 
     .hello {
+        font-size: 21px;
         text-align: center;
-        font-size: 22px;
-        margin: 35px 0 15px;
+        justify-content: center;
+        margin: 30px 0 15px;
     }
 
     .who-am-i {
@@ -365,7 +420,6 @@ img {
         display: block;
         margin: 20px auto;
         font-size: 16px;
-        line-height: 1.7;
         text-align: center;
     }
 
@@ -375,41 +429,60 @@ img {
 
     .see-projects,
     .contact-me {
-        align-self: center;
+        display: inline-block;
         margin-top: 15px;
-        padding: 13px 22px;
+        padding: 13px 20px;
         font-size: 15px;
     }
 
-    /* Why Me */
+    /* WHY ME */
 
     .why-me-h1 {
         font-size: clamp(38px, 9vw, 50px);
         margin: 0 0 35px;
     }
 
+    .whyMe1,
+    .whyMe2,
+    .whyMe3 {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 20px 0;
+        padding: 22px;
+        border: 1px solid rgb(166 123 91 / 35%);
+        border-radius: 14px;
+        background: rgb(10 10 10 / 45%);
+        backdrop-filter: blur(8px);
+        transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .whyMe1:hover,
+    .whyMe2:hover,
+    .whyMe3:hover {
+        transform: translateY(-5px);
+        border-color: #A67B5B;
+    }
+
     .modern-web-dev,
     .creative-problem-solving,
     .continuous-learning {
-        font-size: 23px;
-        margin: 30px 0 15px;
+        font-size: 21px;
+        margin: 0 0 15px;
     }
 
     .p1,
     .p2,
     .p3 {
         margin: 0;
-        font-size: 15px;
-        line-height: 1.8;
+        font-size: 14px;
     }
 
-    /* About */
+    /* ABOUT */
 
     .about-me-p {
         margin: 15px 0;
         max-width: 100%;
         font-size: 15px;
-        line-height: 1.8;
     }
 
     .langs {
@@ -422,11 +495,11 @@ img {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 25px;
     }
 
     .skill {
-        min-width: 110px;
+        min-width: 105px;
         text-align: center;
     }
 
@@ -438,14 +511,13 @@ img {
         margin: 30px 0 0;
         max-width: 100%;
         font-size: 14px;
-        line-height: 1.8;
     }
 
-    /* Contact */
+    /* CONTACT */
 
     .contact-h1 {
-        font-size: clamp(36px, 9vw, 50px);
-        margin: 0 0 30px;
+        font-size: clamp(35px, 9vw, 48px);
+        margin: 0 0 25px;
     }
 
     .p-contact-1,
@@ -453,14 +525,13 @@ img {
     .p-contact-3 {
         margin: 15px 0;
         max-width: 100%;
-        font-size: 15px;
-        line-height: 1.8;
+        font-size: 14px;
     }
 
     .contact-links {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 13px;
     }
 
     .contact-links a {
@@ -469,70 +540,88 @@ img {
         gap: 12px;
         margin: 0;
         font-size: 14px;
+        letter-spacing: 1px;
     }
 
     .contact-links i {
         margin: 0;
-        font-size: 22px;
+        font-size: 20px;
         padding: 9px;
     }
 
     #contact img {
         display: block;
-        width: min(75%, 250px);
+        width: min(75%, 240px);
         max-width: 100%;
         height: auto;
-        margin: 40px auto 0;
+        margin: 35px auto 0;
     }
 
-    /* Smooth transitions */
+    /* SCROLL REVEAL */
 
-    a,
-    button {
-        transition: all 0.3s ease;
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity .7s ease, transform .7s ease;
     }
 
-    p {
-        overflow-wrap: break-word;
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Small phones */
+/* SMALL PHONES */
 
 @media screen and (max-width: 480px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .nav-bar ul.nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .nav-bar ul.nav-menu.show {
+        display: flex;
+    }
 
     #home,
     #whyMe,
     #about,
     #contact {
-        padding: 60px 6%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    .nav-bar ul {
-        gap: 13px;
-        font-size: 13px;
-    }
-
-    .who-am-i {
-        font-size: 36px;
-    }
-
-    .why-me-h1,
-    .langs {
-        font-size: 36px;
-    }
-
-    .modern-web-dev,
-    .creative-problem-solving,
-    .continuous-learning {
-        font-size: 20px;
-    }
-
-    .see-projects,
-    .contact-me {
-        font-size: 14px;
-        padding: 11px 16px;
+    .whyMe1,
+    .whyMe2,
+    .whyMe3 {
+        padding: 18px;
     }
 }
+
+/* REDUCE MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 
 
