@@ -283,3 +283,176 @@ img {
 	margin-top: -50%;
 	border: 2px solid white;
 }
+
+
+
+/* ============================
+   MOBILE RESPONSIVE DESIGN
+============================ */
+
+@media screen and (max-width: 768px) {
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    body {
+        overflow-x: hidden;
+        min-width: 0;
+    }
+
+    #home,
+    #whyMe,
+    #about,
+    #contact {
+        width: 100%;
+        min-height: auto;
+        padding: 65px 5%;
+        box-sizing: border-box;
+    }
+
+    /* Navigation */
+    .nav-bar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 5px;
+        font-size: 16px;
+    }
+
+    /* Hero section */
+    .hello {
+        font-size: 23px;
+        margin-top: 30px;
+    }
+
+    .who-am-i {
+        width: 100%;
+        margin: 0;
+        font-size: clamp(38px, 9vw, 65px);
+        text-align: center;
+        justify-content: center;
+    }
+
+    .my-paragraph {
+        margin: 15px auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .see-projects,
+    .contact-me {
+        margin: 15px 5px;
+        font-size: 15px;
+    }
+
+    /* Why Me */
+    .why-me-h1 {
+        font-size: 45px;
+        margin: 0 0 30px;
+    }
+
+    .modern-web-dev,
+    .creative-problem-solving,
+    .continuous-learning {
+        font-size: 22px;
+        margin: 35px 0 15px;
+    }
+
+    .p1, .p2, .p3 {
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    /* About */
+    #about h1 {
+        font-size: 42px;
+        margin: 0 0 25px;
+    }
+
+    .about-me-p {
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    .langs {
+        font-size: 42px;
+        margin-top: 45px;
+    }
+
+    .skills-container {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .circle {
+        margin: 0 auto;
+    }
+
+    .circle-p {
+        margin: 30px 0 0;
+        line-height: 1.7;
+    }
+
+    /* Contact */
+    .contact-h1 {
+        font-size: clamp(32px, 8vw, 48px);
+        margin: 0 0 25px;
+    }
+
+    .p-contact-1,
+    .p-contact-2,
+    .p-contact-3 {
+        margin: 15px 0;
+        line-height: 1.7;
+    }
+
+    .contact-links a {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-left: 0;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .contact-links i {
+        font-size: 22px;
+        margin-left: 0;
+    }
+
+    /* Profile image */
+    #contact img {
+        display: block;
+        width: min(80%, 280px);
+        max-width: 100%;
+        margin: 35px auto 0;
+        height: auto;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+
+    .nav-bar ul {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .who-am-i {
+        font-size: 38px;
+    }
+
+    .see-projects,
+    .contact-me {
+        padding: 10px 13px;
+        font-size: 14px;
+    }
+
+    .why-me-h1,
+    #about h1,
+    .langs {
+        font-size: 35px;
+    }
+
+}
+
